@@ -1,0 +1,28 @@
+{
+    "name": "orc-date",
+    "description": "A small date converter tool for converting to and from JS Date() and different format strings.",
+    "version": "1.0.1",
+    "main": "index.js",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Offroadcode/orc-date.git"
+    },
+    "keywords": [],
+    "author": {
+        "name": "Kyle Weems",
+        "email": "weemsquirrel@gmail.com",
+        "url": "http://github.com/cssquirrel/"
+    },
+    "contributors": [
+        {
+            "name": "Kyle Weems",
+            "email": "weemsquirrel@gmail.com",
+            "url": "http://github.com/cssquirrel/"
+        }
+    ],
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/Offroadcode/orc-date/issues"
+    },
+    "homepage": "https://github.com/Offroadcode/orc-date"
+  }
