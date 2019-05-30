@@ -24,7 +24,7 @@ console.info(formatted); // outputs '25/05/1977'
 
 ## API
 
-### `OrcDate.convert(date, originalFormatString, newFormatString, correctToZulu)`
+### OrcDate.convert(date, originalFormatString, newFormatString, correctToZulu)
 
 Converts a date represented as a string or a `Date()` object into a newly formatted string or `Date()` object.
 
