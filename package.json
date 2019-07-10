@@ -1,11 +1,11 @@
 {
     "name": "orc-date",
     "description": "A small date converter tool for converting to and from JS Date() and different format strings.",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "main": "index.js",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/Offroadcode/orc-date.git"
+        "type": "git",
+        "url": "https://github.com/Offroadcode/orc-date.git"
     },
     "keywords": [],
     "author": {
@@ -22,7 +22,7 @@
     ],
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/Offroadcode/orc-date/issues"
+        "url": "https://github.com/Offroadcode/orc-date/issues"
     },
     "homepage": "https://github.com/Offroadcode/orc-date"
-  }
+}
