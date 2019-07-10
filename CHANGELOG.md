@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## v1.0.3
+
+### Fixed
+
+* Added leading zero to months and days with a value below 10 for converting a date string into a `Date()` object in `.convert()` to avoid "Invalid Date" error in Safari.
+
+## v1.0.2
+
+### Added
+
+* Added documentation on how to use in README.
+
 ## v1.0.1
 
 ### Fixed

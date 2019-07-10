@@ -3,7 +3,7 @@
  * `correctDateToZulu()` are the only methods intended to be used by 
  * outside code.
  * @author Kyle Weems of Offroadcode
- * @version v1.0.0
+ * @version v1.0.3
  * @copyright 2019 Kyle Weems
  * @license MIT
  */
@@ -54,7 +54,7 @@ var OrcDate = {
             var newMonth = OrcDate.convertMonth(components.month, monthSymbol);
             reformatted = reformatted.split(monthSymbol).join(isNaN(newMonth) ? newMonth : pad(newMonth));
         } else {
-            reformatted = new Date(components.year + '-' + components.month + '-' + components.date);
+            reformatted = new Date(components.year + '-' + pad(components.month) + '-' + pad(components.date));
             if (correctToZulu) {
                 reformatted = OrcDate.correctDateToZulu(reformatted);
             }
