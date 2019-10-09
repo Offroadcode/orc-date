@@ -1,7 +1,7 @@
 {
     "name": "orc-date",
     "description": "A small date converter tool for converting to and from JS Date() and different format strings.",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "index.js",
     "repository": {
         "type": "git",
