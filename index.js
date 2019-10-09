@@ -32,14 +32,14 @@ var OrcDate = {
         if (typeof correctToZulu == 'undefined') {
             correctToZulu = true;
         }
-        let components = false;
+        var components = false;
         if (originalFormatString !== 'Date') {
             var oldFormat = OrcDate._interpretFormat(originalFormatString);
             components = OrcDate._getComponentsPerFormatRules(date, oldFormat);
         } else {
             components = OrcDate._getComponentsFromDate(date, correctToZulu);
         }
-        let reformatted = newFormatString;
+        var reformatted = newFormatString;
         if (newFormatString !== 'Date') {
             reformatted = reformatted.split('YYYY').join(components.year);
             reformatted = reformatted.split('DD').join(pad(components.date));
@@ -76,7 +76,7 @@ var OrcDate = {
         if (!key) {
             key = 'MM';
         }
-        let output = -1;
+        var output = -1;
         var fullNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         var shortNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
         for (var i = 0; i < fullNames.length; i++) {
@@ -147,7 +147,7 @@ var OrcDate = {
         if (forceZulu) {
             date = OrcDate.correctDateToZulu(date);
         }
-        let components = date.toISOString().split('T')[0].split('-');
+        var components = date.toISOString().split('T')[0].split('-');
         return {
             year: Number(components[0]),
             month: Number(components[1]),
@@ -163,7 +163,7 @@ var OrcDate = {
      * @returns {{year: number, month: number, date: number}}
      */
     _getComponentsPerFormatRules: function(date, format) {
-        let components = [];
+        var components = [];
         if (format.prefix) {
             date.split(format.prefix)[1];
         }
@@ -173,7 +173,7 @@ var OrcDate = {
         components.push(date.split(format.separators[0])[0]);
         components.push(date.split(components[0] + format.separators[0])[1].split(format.separators[1])[0]);
         components.push(date.split(components[1] + format.separators[1])[1]);
-        let monthIndex = -1;
+        var monthIndex = -1;
         for (var i = 0; i < format.order.length; i++) {
             if (format.order[i] !== 'YYYY' && format.order[i] !== 'DD') {
                 monthIndex = i;
@@ -196,7 +196,7 @@ var OrcDate = {
      * @returns {{order: string[], prefix: string | false, suffix: string | false, separators: string[]}}
      */
     _interpretFormat: function(format)  {
-        let order = ['YYYY'];
+        var order = ['YYYY'];
         var monthSymbol = (format.indexOf('MMMM') > -1) ? 'MMMM' : (format.indexOf('MMM') > -1) ? 'MMM' : 'MM';
         var yearIndex = format.indexOf('YYYY'); 
         var monthIndex = format.indexOf(monthSymbol);
