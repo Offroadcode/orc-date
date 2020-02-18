@@ -163,17 +163,23 @@ var OrcDate = {
      * @returns {{year: number, month: number, date: number}}
      */
     _getComponentsPerFormatRules: function(date, format) {
-        var components = [];
+        let components = [];
         if (format.prefix) {
             date.split(format.prefix)[1];
         }
         if (format.suffix) {
             date.split(format.suffix)[2];
         }
-        components.push(date.split(format.separators[0])[0]);
-        components.push(date.split(components[0] + format.separators[0])[1].split(format.separators[1])[0]);
-        components.push(date.split(components[1] + format.separators[1])[1]);
-        var monthIndex = -1;
+        if ( format.separators[0] == format.separators[1] ) {
+            components = date.split(format.separators[0]);
+        } else {
+            var firstSplit = date.split(format.separators[0]);
+            components.push(firstSplit[0]);
+            var secondSplit = firstSplit[1].split( format.separators[1] );
+            components.push(secondSplit[0]); 
+            components.push(secondSplit[1]);
+        }
+        let monthIndex = -1;
         for (var i = 0; i < format.order.length; i++) {
             if (format.order[i] !== 'YYYY' && format.order[i] !== 'DD') {
                 monthIndex = i;
