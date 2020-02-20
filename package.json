@@ -18,6 +18,11 @@
             "name": "Kyle Weems",
             "email": "weemsquirrel@gmail.com",
             "url": "http://github.com/cssquirrel/"
+        },
+        {
+            "name": "Pete Duncanson",
+            "email": "pete@offroadcode.com",
+            "url": "http://github.com/peteduncanson/"
         }
     ],
     "license": "MIT",
